@@ -21,38 +21,38 @@ export function Nav() {
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-50 border-b border-ink/5 bg-canvas/80 backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-50 border-b border-border bg-white/90 backdrop-blur-xl"
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
         <a href="#" aria-label="Zelaa home">
           <Logo />
         </a>
 
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-0.5 md:flex">
           {LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="rounded-full px-4 py-2 text-[15px] font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
+              className="rounded-full px-3.5 py-1.5 text-[12px] font-medium tracking-[-0.01em] text-ink-soft transition-colors hover:bg-canvas-soft hover:text-ink"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <a
             href="#waitlist"
-            className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-canvas transition-transform hover:scale-[1.03] active:scale-[0.98] md:inline-block"
+            className="hidden rounded-full bg-ink px-4 py-2 text-[12px] font-medium tracking-[-0.01em] text-white transition-all hover:bg-[#1B1B1B] hover:scale-[1.03] active:scale-[0.98] md:inline-block"
           >
             Get early access
           </a>
           <button
-            className="grid size-10 place-items-center rounded-full bg-ink/5 text-ink md:hidden"
+            className="grid size-9 place-items-center rounded-full bg-canvas-muted text-ink md:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
           >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            {open ? <X className="size-4" /> : <Menu className="size-4" />}
           </button>
         </div>
       </div>
@@ -61,14 +61,14 @@ export function Nav() {
         <motion.nav
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="border-t border-ink/5 bg-canvas px-5 pb-5 pt-2 md:hidden"
+          className="border-t border-border bg-white px-5 pb-5 pt-2 md:hidden"
         >
           {LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block rounded-2xl px-4 py-3 text-[15px] text-ink-soft hover:bg-canvas-soft"
+              className="block rounded-xl px-4 py-2.5 text-[13px] tracking-[-0.01em] text-ink-soft hover:bg-canvas-soft"
             >
               {link.label}
             </a>
@@ -76,7 +76,7 @@ export function Nav() {
           <a
             href="#waitlist"
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-2xl bg-ink px-4 py-3 text-center text-[15px] font-medium text-canvas"
+            className="mt-2 block rounded-xl bg-ink px-4 py-2.5 text-center text-[13px] font-medium tracking-[-0.01em] text-white"
           >
             Get early access
           </a>

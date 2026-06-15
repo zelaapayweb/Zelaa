@@ -44,16 +44,10 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className="mx-auto max-w-2xl text-center">
-      <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-moss-700">
-        {eyebrow}
-      </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-[2.75rem] sm:leading-[1.15]">
-        {title}
-      </h2>
+      <p className="eyebrow text-ink-faint">{eyebrow}</p>
+      <h2 className="heading-section mt-3 text-ink">{title}</h2>
       {subtitle && (
-        <p className="mt-4 text-[17px] leading-relaxed text-ink-soft">
-          {subtitle}
-        </p>
+        <p className="body-muted mt-4 text-ink-soft">{subtitle}</p>
       )}
     </Reveal>
   );

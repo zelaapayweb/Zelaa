@@ -46,14 +46,14 @@ const ITEMS = [
 
 export function WatchGrid() {
   return (
-    <section id="intelligence" className="py-24 sm:py-32">
+    <section id="intelligence" className="bg-canvas-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Coverage"
           title="What Zelaa watches"
           subtitle="One sentinel across everything that can quietly damage a portfolio on-chain."
         />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (
             <motion.div
               key={item.title}
@@ -61,17 +61,13 @@ export function WatchGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.07, ease: "easeOut" }}
-              className="group rounded-3xl border border-ink/5 bg-canvas-soft/60 p-7 transition-all hover:-translate-y-1 hover:bg-white hover:shadow-card-lg"
+              className="group rounded-2xl border border-border bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-card-lg"
             >
-              <span className="grid size-12 place-items-center rounded-2xl bg-white text-moss-700 shadow-card transition-colors group-hover:bg-moss-700 group-hover:text-canvas">
-                <item.icon className="size-5" />
+              <span className="grid size-10 place-items-center rounded-xl bg-canvas-muted text-ink-soft shadow-card transition-colors group-hover:bg-ink group-hover:text-white">
+                <item.icon className="size-4.5" />
               </span>
-              <h3 className="mt-5 text-[17px] font-semibold text-ink">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
-                {item.body}
-              </p>
+              <h3 className="card-title mt-4 text-ink">{item.title}</h3>
+              <p className="card-copy mt-2 text-ink-soft">{item.body}</p>
             </motion.div>
           ))}
         </div>

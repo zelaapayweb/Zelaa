@@ -46,14 +46,14 @@ const ITEMS = [
 
 export function Audience() {
   return (
-    <section className="bg-canvas-soft py-24 sm:py-32">
+    <section className="bg-canvas-blush py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Who it's for"
           title="Made for high-velocity crypto users."
           subtitle="If your wallet moves fast, Zelaa helps you slow down before the wrong signature."
         />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (
             <motion.div
               key={item.title}
@@ -61,17 +61,13 @@ export function Audience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.07, ease: "easeOut" }}
-              className="group rounded-3xl bg-white p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-card-lg"
+              className="group rounded-2xl border border-border bg-white p-5 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-lg"
             >
-              <span className="grid size-12 place-items-center rounded-2xl bg-moss-100/60 text-moss-700 transition-colors group-hover:bg-moss-700 group-hover:text-canvas">
-                <item.icon className="size-5" />
+              <span className="grid size-10 place-items-center rounded-xl bg-canvas-muted text-ink-soft transition-colors group-hover:bg-ink group-hover:text-white">
+                <item.icon className="size-4.5" />
               </span>
-              <h3 className="mt-5 text-[17px] font-semibold text-ink">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
-                {item.body}
-              </p>
+              <h3 className="card-title mt-4 text-ink">{item.title}</h3>
+              <p className="card-copy mt-1.5 text-ink-soft">{item.body}</p>
             </motion.div>
           ))}
         </div>

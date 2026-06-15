@@ -1,38 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  /* Page + canvas */
-  --color-sage: #b4c1a4;
-  --color-sage-deep: #a3b292;
-  --color-canvas: #f7f7f1;
-  --color-canvas-soft: #eff0e6;
+  /* Base backgrounds */
+  --color-canvas:       #FFFFFF;
+  --color-canvas-soft:  #FAF7F4;   /* warm cream */
+  --color-canvas-blush: #FBF6F8;   /* pale blush */
+  --color-canvas-cream: #FCFBF9;   /* warm white */
+  --color-canvas-muted: #F5F5F3;   /* light neutral grey */
 
-  /* Ink */
-  --color-ink: #1d2419;
-  --color-ink-soft: #4b5544;
-  --color-ink-faint: #67715d;
+  /* Text */
+  --color-ink:       #050505;
+  --color-ink-soft:  #6F6B6B;
+  --color-ink-faint: #9A9494;
+  --color-ink-ghost: #BBB4B4;
 
-  /* Moss / organic palette */
-  --color-moss-100: #d6decb;
-  --color-moss-300: #97a886;
-  --color-moss-500: #6c7f5c;
-  --color-moss-700: #46553b;
-  --color-moss-900: #2a3424;
+  /* Borders */
+  --color-border:      #EDE7E7;
+  --color-border-soft: #F1EBEB;
 
-  /* Signal colors (muted, no neon) */
-  --color-signal-green: #3e7050;
-  --color-signal-green-soft: #e3eee5;
-  --color-signal-amber: #a87f2c;
-  --color-signal-amber-soft: #f5edda;
-  --color-signal-red: #b0503c;
-  --color-signal-red-soft: #f6e5e0;
+  /* Pink glow accents — atmospheric use only */
+  --color-glow-pink:  #F7C7D9;
+  --color-glow-blush: #F6D6E2;
+  --color-glow-rose:  #EFC0CF;
+  --color-glow-peach: #F8DFC9;
+  --color-glow-cream: #F9ECD8;
+
+  /* Micro accent */
+  --color-dusty-pink: #E9B8C8;
+
+  /* Semantic signal colours — hints only, not brand */
+  --color-signal-green:      #2D6B4A;
+  --color-signal-green-soft: #DDEEE3;
+  --color-signal-amber:      #7A5A12;
+  --color-signal-amber-soft: #F6E7C8;
+  --color-signal-red:        #8B2535;
+  --color-signal-red-soft:   #F6D6D9;
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --shadow-card: 0 1px 2px rgb(29 36 25 / 0.04), 0 8px 24px rgb(29 36 25 / 0.06);
-  --shadow-card-lg: 0 2px 4px rgb(29 36 25 / 0.05), 0 24px 64px -16px rgb(29 36 25 / 0.18);
-  --shadow-float: 0 1px 1px rgb(29 36 25 / 0.05), 0 16px 40px -8px rgb(29 36 25 / 0.22);
+  --shadow-card:    0 1px 2px rgba(5,5,5,0.04), 0 8px 28px rgba(5,5,5,0.06);
+  --shadow-card-lg: 0 2px 4px rgba(5,5,5,0.04), 0 24px 64px -16px rgba(5,5,5,0.10);
+  --shadow-float:   0 1px 1px rgba(5,5,5,0.04), 0 12px 36px -6px rgba(5,5,5,0.12);
 }
 
 html {
@@ -48,40 +57,100 @@ body {
 }
 
 ::selection {
-  background: var(--color-moss-300);
+  background: var(--color-glow-blush);
   color: var(--color-ink);
 }
 
 /* Glass card */
 .glass {
-  background: rgb(255 255 255 / 0.72);
-  backdrop-filter: blur(16px) saturate(1.2);
-  -webkit-backdrop-filter: blur(16px) saturate(1.2);
-  border: 1px solid rgb(255 255 255 / 0.65);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  border: 1px solid rgba(237, 231, 231, 0.80);
 }
 
-/* Subtle blueprint grid for section backdrops */
+/* Blueprint grid — very faint warm neutral */
 .grid-lines {
   background-image:
-    linear-gradient(to right, rgb(29 36 25 / 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(29 36 25 / 0.045) 1px, transparent 1px);
+    linear-gradient(to right, rgba(5,5,5,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5,5,5,0.03) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
-/* Tiny network-node dot pattern */
+/* Network-node dot pattern */
 .net-dots {
-  background-image: radial-gradient(rgb(29 36 25 / 0.09) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(5,5,5,0.055) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
-/* Subtle grain overlay for organic shapes */
+/* ─── Typography utilities ─────────────────────────────────────────────── */
+
+/* Hero headline — 64–76px, very tight */
+.heading-hero {
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+}
+
+/* Section headings — 36–48px, sharp */
+.heading-section {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.0;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+/* Eyebrow labels — tiny uppercase technical */
+.eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+}
+
+/* Muted body copy */
+.body-muted {
+  font-size: 14px;
+  line-height: 1.48;
+  letter-spacing: -0.01em;
+}
+
+/* Feature card heading */
+.card-title {
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+/* Feature card body */
+.card-copy {
+  font-size: 13px;
+  line-height: 1.48;
+  letter-spacing: -0.01em;
+}
+
+/* Small UI labels */
+.ui-label {
+  font-size: 11px;
+  letter-spacing: 0.01em;
+}
+
+/* Tabular numbers for dashboard data */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* Grain overlay */
 .grain::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.25;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }

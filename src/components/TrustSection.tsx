@@ -46,14 +46,19 @@ const ITEMS = [
 
 export function TrustSection() {
   return (
-    <section id="security" className="bg-canvas-soft py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="security" className="relative overflow-hidden bg-canvas-blush py-24 sm:py-32">
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-1/2 h-[40rem] w-[60rem] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+        style={{ background: "radial-gradient(circle, rgba(247,199,217,0.18) 0%, transparent 65%)" }}
+      />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Security model"
           title="Built to watch, never touch."
           subtitle="Zelaa analyzes risk without asking for control of your wallet."
         />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (
             <motion.div
               key={item.title}
@@ -61,18 +66,14 @@ export function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.07, ease: "easeOut" }}
-              className="flex items-start gap-4 rounded-3xl bg-white p-6 shadow-card"
+              className="flex items-start gap-3.5 rounded-2xl border border-border bg-white p-5 shadow-card"
             >
-              <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-moss-100/60 text-moss-700">
-                <item.icon className="size-5" />
+              <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-canvas-muted text-ink-soft">
+                <item.icon className="size-4.5" />
               </span>
               <div>
-                <h3 className="text-[17px] font-semibold text-ink">
-                  {item.title}
-                </h3>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
-                  {item.body}
-                </p>
+                <h3 className="card-title text-ink">{item.title}</h3>
+                <p className="card-copy mt-1.5 text-ink-soft">{item.body}</p>
               </div>
             </motion.div>
           ))}

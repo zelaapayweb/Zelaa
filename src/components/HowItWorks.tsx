@@ -27,13 +27,13 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="bg-canvas-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="How it works"
           title="Three steps to a protected wallet"
         />
-        <div className="mt-14 grid gap-4 lg:grid-cols-3">
+        <div className="mt-14 grid gap-3 lg:grid-cols-3">
           {STEPS.map((step, i) => (
             <motion.div
               key={step.step}
@@ -41,20 +41,16 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.65, delay: i * 0.12, ease: "easeOut" }}
-              className="relative rounded-3xl bg-white p-8 shadow-card"
+              className="relative rounded-2xl border border-border bg-white p-6 shadow-card"
             >
-              <span className="absolute right-7 top-7 font-mono text-sm text-ink-faint">
+              <span className="tabular absolute right-5 top-5 font-mono text-[11px] text-ink-ghost">
                 {step.step}
               </span>
-              <span className="grid size-12 place-items-center rounded-2xl bg-moss-700 text-canvas">
-                <step.icon className="size-5" />
+              <span className="grid size-10 place-items-center rounded-xl bg-ink text-white">
+                <step.icon className="size-4.5" />
               </span>
-              <h3 className="mt-6 text-[17px] font-semibold text-ink">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
-                {step.body}
-              </p>
+              <h3 className="card-title mt-5 text-ink">{step.title}</h3>
+              <p className="card-copy mt-2 text-ink-soft">{step.body}</p>
             </motion.div>
           ))}
         </div>
