@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZeFi — Stop risky crypto decisions before you sign",
+  title: "Zelaa — Stop risky crypto decisions before you sign",
   description:
-    "ZeFi is an AI sentinel for wallets, approvals, swaps, bridges, gas leakage, and on-chain behavior. Get risk signals before you sign.",
+    "Zelaa is an AI sentinel for wallets, approvals, swaps, bridges, gas leakage, and on-chain behavior. Get risk signals before you sign.",
 };
 
 export default function RootLayout({

@@ -24,7 +24,7 @@ export function FinalCta() {
                 Your wallet needs a second brain.
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-canvas/70">
-                Join early access for ZeFi and start protecting your crypto
+                Join early access for Zelaa and start protecting your crypto
                 flow before the next bad signature.
               </p>
 

@@ -14,7 +14,7 @@ const LOSS_VECTORS = [
   "Hidden fees",
 ];
 
-export function WhyZefi() {
+export function WhyZelaa() {
   return (
     <section className="relative overflow-hidden bg-canvas-soft py-24 sm:py-32">
       <div
@@ -36,7 +36,7 @@ export function WhyZefi() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
               They also lose money through rushed approvals, fake contracts,
               bridge mistakes, gas leakage, failed swaps, hidden fees, impulsive
-              meme-coin entries, and wallet-draining links. ZeFi gives you a
+              meme-coin entries, and wallet-draining links. Zelaa gives you a
               calm intelligence layer{" "}
               <span className="font-medium text-ink">
                 before the damage happens.

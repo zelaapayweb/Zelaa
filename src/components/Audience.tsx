@@ -51,7 +51,7 @@ export function Audience() {
         <SectionHeading
           eyebrow="Who it's for"
           title="Made for high-velocity crypto users."
-          subtitle="If your wallet moves fast, ZeFi helps you slow down before the wrong signature."
+          subtitle="If your wallet moves fast, Zelaa helps you slow down before the wrong signature."
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (

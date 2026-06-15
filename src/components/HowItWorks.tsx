@@ -14,7 +14,7 @@ const STEPS = [
   {
     icon: Radar,
     step: "02",
-    title: "ZeFi maps your on-chain flow",
+    title: "Zelaa maps your on-chain flow",
     body: "It analyzes approvals, swaps, contracts, bridges, gas, trading behavior, and token exposure.",
   },
   {

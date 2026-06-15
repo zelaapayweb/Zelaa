@@ -241,7 +241,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.22, ease: EASE }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft sm:text-xl"
           >
-            ZeFi is an AI wallet sentinel that scans approvals, swaps, bridges,
+            Zelaa is an AI wallet sentinel that scans approvals, swaps, bridges,
             gas leakage, contracts, and on-chain behavior before they damage
             your portfolio.
           </motion.p>

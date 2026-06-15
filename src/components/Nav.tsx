@@ -24,7 +24,7 @@ export function Nav() {
       className="fixed inset-x-0 top-0 z-50 border-b border-ink/5 bg-canvas/80 backdrop-blur-xl"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
-        <a href="#" aria-label="ZeFi home">
+        <a href="#" aria-label="Zelaa home">
           <Logo />
         </a>
 

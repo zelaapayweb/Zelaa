@@ -15,7 +15,7 @@ export function Logo({ className = "" }: { className?: string }) {
         </svg>
       </span>
       <span className="text-lg font-semibold tracking-tight text-ink">
-        ZeFi
+        Zelaa
       </span>
     </span>
   );

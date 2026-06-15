@@ -6,7 +6,7 @@ import { WatchGrid } from "@/components/WatchGrid";
 import { PreSignCheck } from "@/components/PreSignCheck";
 import { FlowIntelligence } from "@/components/FlowIntelligence";
 import { Signals } from "@/components/Signals";
-import { WhyZefi } from "@/components/WhyZefi";
+import { WhyZelaa } from "@/components/WhyZelaa";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
@@ -22,7 +22,7 @@ export default function Home() {
         <PreSignCheck />
         <FlowIntelligence />
         <Signals />
-        <WhyZefi />
+        <WhyZelaa />
         <HowItWorks />
         <Audience />
         <FinalCta />

@@ -25,7 +25,7 @@ export function PreSignCheck() {
         <SectionHeading
           eyebrow="Risk engine"
           title="Pre-sign AI risk check"
-          subtitle="Before a signature leaves your wallet, ZeFi simulates the transaction and explains exactly what you are about to authorize — in plain language."
+          subtitle="Before a signature leaves your wallet, Zelaa simulates the transaction and explains exactly what you are about to authorize — in plain language."
         />
 
         <Reveal delay={0.15} className="mx-auto mt-14 max-w-4xl">
@@ -140,7 +140,7 @@ export function PreSignCheck() {
                 </div>
 
                 <p className="mt-5 text-xs leading-relaxed text-ink-faint">
-                  ZeFi never blocks or signs transactions for you. Signals are
+                  Zelaa never blocks or signs transactions for you. Signals are
                   informational, not financial advice — you stay in control of
                   every signature.
                 </p>
@@ -158,10 +158,10 @@ export function PreSignCheck() {
               </span>
               <div>
                 <h3 className="text-xl font-semibold tracking-tight text-ink">
-                  How ZeFi works before signing
+                  How Zelaa works before signing
                 </h3>
                 <p className="mt-2.5 text-[15px] leading-relaxed text-ink-soft sm:text-base">
-                  ZeFi starts with read-only wallet scanning and transaction
+                  Zelaa starts with read-only wallet scanning and transaction
                   simulation. It analyzes public wallet activity, contract
                   permissions, token approvals, routing, gas behavior, and
                   known risk patterns. The goal is to explain risk before you
@@ -169,7 +169,7 @@ export function PreSignCheck() {
                 </p>
                 <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed text-ink-faint">
                   <Info className="mt-0.5 size-4 shrink-0" />
-                  ZeFi does not replace user judgment and does not provide
+                  Zelaa does not replace user judgment and does not provide
                   investment advice. It gives risk intelligence so you can make
                   better signing decisions.
                 </p>

@@ -50,7 +50,7 @@ export function WatchGrid() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Coverage"
-          title="What ZeFi watches"
+          title="What Zelaa watches"
           subtitle="One sentinel across everything that can quietly damage a portfolio on-chain."
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

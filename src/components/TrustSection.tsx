@@ -20,17 +20,17 @@ const ITEMS = [
   {
     icon: KeyRound,
     title: "No seed phrase, ever",
-    body: "ZeFi never asks you to enter seed phrases or private keys.",
+    body: "Zelaa never asks you to enter seed phrases or private keys.",
   },
   {
     icon: Vault,
     title: "Non-custodial by design",
-    body: "ZeFi does not hold, move, or custody user funds.",
+    body: "Zelaa does not hold, move, or custody user funds.",
   },
   {
     icon: MousePointerClick,
     title: "You approve every action",
-    body: "ZeFi explains risk. You remain in control of every signature.",
+    body: "Zelaa explains risk. You remain in control of every signature.",
   },
   {
     icon: FileKey2,
@@ -51,7 +51,7 @@ export function TrustSection() {
         <SectionHeading
           eyebrow="Security model"
           title="Built to watch, never touch."
-          subtitle="ZeFi analyzes risk without asking for control of your wallet."
+          subtitle="Zelaa analyzes risk without asking for control of your wallet."
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (

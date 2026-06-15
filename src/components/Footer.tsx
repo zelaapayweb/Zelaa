@@ -8,7 +8,7 @@ const LINKS = [
   { label: "Docs", href: "#" },
   { label: "Privacy", href: "#" },
   { label: "X / Twitter", href: "#" },
-  { label: "Contact", href: "mailto:hello@zefi.xyz" },
+  { label: "Contact", href: "mailto:hello@zelaa.xyz" },
 ];
 
 export function Footer() {
@@ -35,7 +35,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="mt-10 text-center text-sm text-ink-faint sm:text-left">
-          © 2026 ZeFi. ZeFi provides risk intelligence, not financial advice.
+          © 2026 Zelaa. Zelaa provides risk intelligence, not financial advice.
           Users remain responsible for every transaction they sign.
         </p>
       </div>
