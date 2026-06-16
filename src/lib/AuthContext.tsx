@@ -8,8 +8,8 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
+import { supabase } from "@/lib/supabase";
 import {
-  getSession,
   signIn as authSignIn,
   signUp as authSignUp,
   signOut as authSignOut,
@@ -33,25 +33,51 @@ interface AuthContextValue {
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 
+function mapSupabaseUser(u: { id: string; email?: string | null; created_at: string }): User {
+  return { id: u.id, email: u.email ?? "", created_at: u.created_at };
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [claim, setClaim] = useState<RewardClaim | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const refreshClaim = useCallback(() => {
-    if (user) setClaim(getRewardClaim(user.id));
-  }, [user]);
-
-  useEffect(() => {
-    const session = getSession();
-    setUser(session);
-    if (session) setClaim(getRewardClaim(session.id));
-    setLoading(false);
+  const loadClaim = useCallback(async (userId: string) => {
+    const c = await getRewardClaim(userId);
+    setClaim(c);
   }, []);
 
+  const refreshClaim = useCallback(() => {
+    if (user) loadClaim(user.id);
+  }, [user, loadClaim]);
+
   useEffect(() => {
-    if (user) setClaim(getRewardClaim(user.id));
-  }, [user]);
+    // Hydrate session once on mount
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session?.user) {
+        const u = mapSupabaseUser(data.session.user);
+        setUser(u);
+        loadClaim(u.id);
+      }
+      setLoading(false);
+    });
+
+    // Keep in sync with Supabase auth events
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (session?.user) {
+          const u = mapSupabaseUser(session.user);
+          setUser(u);
+          loadClaim(u.id);
+        } else {
+          setUser(null);
+          setClaim(null);
+        }
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, [loadClaim]);
 
   const handleSignIn = async (email: string, password: string) => {
     const { user: u, error } = await authSignIn(email, password);
