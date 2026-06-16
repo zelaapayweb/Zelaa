@@ -1,5 +1,5 @@
 import { Nav } from "@/components/Nav";
-import { Hero } from "@/components/Hero";
+import { Hero, HERO_GLOW } from "@/components/Hero";
 import { PainSection } from "@/components/PainSection";
 import { BentoSection } from "@/components/BentoSection";
 import { DarkSection } from "@/components/DarkSection";
@@ -13,19 +13,26 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Nav />
-      <main className="w-full overflow-x-hidden">
-        <Hero />
-        <PainSection />
-        <BentoSection />
-        <DarkSection />
-        <HowItWorks />
-        <WatchGrid />
-        <DemoWarnings />
-        <FAQ />
-        <FinalCta />
-      </main>
-      <Footer />
+      <div className="relative">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0"
+          style={{ height: 728, background: HERO_GLOW }}
+        />
+        <Nav />
+        <main className="w-full overflow-x-hidden">
+          <Hero />
+          <PainSection />
+          <BentoSection />
+          <DarkSection />
+          <HowItWorks />
+          <WatchGrid />
+          <DemoWarnings />
+          <FAQ />
+          <FinalCta />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

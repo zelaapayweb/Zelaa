@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { ChromeIcon } from "@/components/ChromeIcon";
 
 const LINKS = [
   { label: "Product", href: "#product" },
@@ -144,6 +145,7 @@ export function Nav() {
               whiteSpace: "nowrap",
             }}
           >
+            <ChromeIcon size={15} />
             Join Chrome Beta
           </a>
         </div>
@@ -233,7 +235,8 @@ export function Nav() {
                     justifyContent: "center",
                   }}
                 >
-                  Join Chrome Beta
+                  <ChromeIcon size={15} />
+            Join Chrome Beta
                 </a>
                 <a
                   href="mailto:hello@zelaa.xyz"

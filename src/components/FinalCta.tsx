@@ -1,4 +1,5 @@
 "use client";
+import { ChromeIcon } from "@/components/ChromeIcon";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -232,6 +233,7 @@ export function FinalCta() {
                       type="submit"
                       className="btn-gradient inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-7 py-3 text-[14px] font-medium"
                     >
+                      <ChromeIcon size={16} />
                       Join Chrome Beta
                     </button>
                   </form>

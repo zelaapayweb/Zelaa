@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChromeIcon } from "@/components/ChromeIcon";
 
-const HERO_GLOW = [
+export const HERO_GLOW = [
   "radial-gradient(ellipse 90% 70% at 50% -10%, rgba(169,141,255,0.30) 0%, rgba(255,139,216,0.16) 45%, transparent 70%)",
   "radial-gradient(ellipse 50% 45% at 8% 55%, rgba(123,97,255,0.10) 0%, transparent 60%)",
   "radial-gradient(ellipse 50% 45% at 92% 55%, rgba(243,91,200,0.08) 0%, transparent 60%)",
@@ -707,12 +708,6 @@ function HeroEmailCapture() {
 export function Hero() {
   return (
     <section id="product" className="relative overflow-x-hidden pb-0 pt-10 sm:pt-14">
-      {/* Atmospheric glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0"
-        style={{ height: 640, background: HERO_GLOW }}
-      />
 
       <HeroFloatingScene />
 
@@ -733,7 +728,7 @@ export function Hero() {
               letterSpacing: "0.02em",
             }}
           >
-            <img src="/zelaa-icon.png" alt="" width={16} height={16} className="rounded-[4px]" style={{ width: 16, height: 16 }} />
+            <ChromeIcon size={14} />
             Chrome Extension · AI Risk Analysis
           </span>
 
