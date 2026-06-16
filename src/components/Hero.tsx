@@ -196,7 +196,7 @@ function HeroFloatingScene() {
         <EthereumMark />
       </FloatingTokenBadge>
 
-      {/* Solana — upper-right of visual (tablet/desktop only) */}
+      {/* Solana — upper-right, mirroring Ethereum */}
       <FloatingTokenBadge
         size={88}
         bg="radial-gradient(circle at 32% 26%, rgba(255,255,255,0.90) 0%, rgba(216,141,255,0.55) 38%, rgba(243,91,200,0.50) 100%)"
@@ -205,21 +205,21 @@ function HeroFloatingScene() {
         delay={0.5}
         animate={{ x: [0, 6, 0, -6, 0], y: [0, -5, 0, 5, 0] }}
         className="hidden lg:block"
-        style={{ top: 540, right: "8%" }}
+        style={{ top: 80, right: "3%" }}
       >
         <SolanaMark />
       </FloatingTokenBadge>
 
-      {/* Uniswap — mid-right, beside the Zelaa card */}
+      {/* Uniswap — mid-right */}
       <FloatingTokenBadge
-        size={130}
+        size={110}
         bg="radial-gradient(circle at 32% 26%, rgba(255,255,255,0.90) 0%, rgba(255,182,224,0.55) 38%, rgba(243,91,200,0.55) 100%)"
         glow="rgba(243,91,200,0.32)"
         duration={7.5}
         delay={0.35}
         animate={{ x: [0, -8, 0], y: [0, 6, 0] }}
         className="hidden sm:block"
-        style={{ top: 860, right: "2%" }}
+        style={{ top: 420, right: "2%" }}
       >
         <UniswapMark />
       </FloatingTokenBadge>
@@ -236,7 +236,7 @@ function HeroFloatingScene() {
         <UniswapMark />
       </FloatingTokenBadge>
 
-      {/* USDC — lower-left of visual (tablet/desktop only) */}
+      {/* USDC — mid-left */}
       <FloatingTokenBadge
         size={92}
         bg="radial-gradient(circle at 32% 26%, rgba(255,255,255,0.92) 0%, rgba(169,141,255,0.45) 35%, rgba(123,150,255,0.55) 100%)"
@@ -245,7 +245,7 @@ function HeroFloatingScene() {
         delay={0.65}
         animate={{ y: [0, -9, 0], scale: [1, 1.03, 1] }}
         className="hidden lg:block"
-        style={{ top: 1040, left: "5%" }}
+        style={{ top: 400, left: "3%" }}
       >
         <USDCMark />
       </FloatingTokenBadge>
