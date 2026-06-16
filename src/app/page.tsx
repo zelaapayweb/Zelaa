@@ -1,13 +1,12 @@
 import { Nav } from "@/components/Nav";
-import { TrustSection } from "@/components/TrustSection";
-import { Audience } from "@/components/Audience";
 import { Hero } from "@/components/Hero";
-import { WatchGrid } from "@/components/WatchGrid";
-import { PreSignCheck } from "@/components/PreSignCheck";
-import { FlowIntelligence } from "@/components/FlowIntelligence";
-import { Signals } from "@/components/Signals";
-import { WhyZelaa } from "@/components/WhyZelaa";
+import { PainSection } from "@/components/PainSection";
+import { BentoSection } from "@/components/BentoSection";
+import { DarkSection } from "@/components/DarkSection";
 import { HowItWorks } from "@/components/HowItWorks";
+import { WatchGrid } from "@/components/WatchGrid";
+import { DemoWarnings } from "@/components/DemoWarnings";
+import { FAQ } from "@/components/FAQ";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 
@@ -15,16 +14,15 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main>
+      <main className="w-full overflow-x-hidden">
         <Hero />
-        <WatchGrid />
-        <TrustSection />
-        <PreSignCheck />
-        <FlowIntelligence />
-        <Signals />
-        <WhyZelaa />
+        <PainSection />
+        <BentoSection />
+        <DarkSection />
         <HowItWorks />
-        <Audience />
+        <WatchGrid />
+        <DemoWarnings />
+        <FAQ />
         <FinalCta />
       </main>
       <Footer />
