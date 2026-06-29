@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Zelaa — Know what you're signing before it's too late",
   description:
     "Zelaa is an AI risk layer for crypto signers. Understand every transaction before you confirm.",
+  other: {
+    "ory-verify": "orynth-31f7c5c09a474c87a8ccddbad197e877",
+  },
 };
 
 export default function RootLayout({
